@@ -102,10 +102,9 @@ cd vss-server/java
 ```
 
 ### Build
-Note: build command also does tests which are hardcoded to run against containerized posgress, so there will be some errors printed out, if errors are only about tests, then it is fine.
 ```
 gradle wrapper --gradle-version 8.1.1
-./gradlew build
+./gradlew build -x test  # Running tests requires docker-engine to be running.
 ```
 
 ### Deploy
